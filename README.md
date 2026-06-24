@@ -43,7 +43,8 @@ The authentication system is mocked and stateless:
 - POST /auth/logout - returns 204
 - POST /auth/refresh - returns fake new accessToken
 - Protected route (/favourites) uses middleware to validate token
-  On 401 Unauthorized:
+
+On 401 Unauthorized:
 
 - client calls POST /auth/refresh
 - receives new access token
