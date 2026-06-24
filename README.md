@@ -11,14 +11,17 @@ Linting: npm run lint
 Formatting: npm run format
 
 Design decisions / trade-offs
+
 1. Mocked authentication
    Authentication is fully mocked (no DB / no JWT library).
+
 - faster development
 - focus on API structure
 - not production secure
 
 2. Redis caching
    Redis used for caching SWAPI responses:
+
 - reduces external API calls
 - improves response time
 - TTL-based cache (15 minutes)
@@ -28,6 +31,7 @@ Design decisions / trade-offs
 
 3. Testing strategy
    Jest used for unit tests:
+
 - middleware tested in isolation
   Trade-off:
 - no full HTTP flow testing
@@ -39,6 +43,7 @@ POST /auth/logout - returns 204
 POST /auth/refresh - returns fake new accessToken
 Protected route (/favourites) uses middleware to validate token
 On 401 Unauthorized:
+
 - client calls POST /auth/refresh
 - receives new access token
 - retries original request once
