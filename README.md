@@ -38,11 +38,12 @@ Design decisions / trade-offs
 
 Authentication flow
 The authentication system is mocked and stateless:
-POST /auth/login - returns fake accessToken and refreshToken
-POST /auth/logout - returns 204
-POST /auth/refresh - returns fake new accessToken
-Protected route (/favourites) uses middleware to validate token
-On 401 Unauthorized:
+
+- POST /auth/login - returns fake accessToken and refreshToken
+- POST /auth/logout - returns 204
+- POST /auth/refresh - returns fake new accessToken
+- Protected route (/favourites) uses middleware to validate token
+  On 401 Unauthorized:
 
 - client calls POST /auth/refresh
 - receives new access token
