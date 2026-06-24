@@ -2,13 +2,11 @@
   "compilerOptions": {
     "target": "ES2022",
     "module": "CommonJS",
-    "rootDir": "./src",
+    "rootDir": ".",
     "outDir": "./dist",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
-  },
-  "scripts": {
-    "test": "jest"
+    "skipLibCheck": true,
+    "types": ["jest"]
   }
 }

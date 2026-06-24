@@ -1,4 +1,4 @@
-version: "3.9"
+version: '3.9'
 
 services:
   app:
@@ -8,7 +8,7 @@ services:
       target: build
     container_name: wa-tech-assignment
     ports:
-      - "3000:3000"
+      - '3000:3000'
     env_file:
       - .env
     environment:
@@ -23,11 +23,11 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name:  wa-tech-assignment-redis
+    container_name: wa-tech-assignment-redis
     ports:
-      - "6379:6379"
+      - '6379:6379'
     volumes:
-    - redis-data:/data
+      - redis-data:/data
 
 volumes:
-  redis-data:  
+  redis-data:
